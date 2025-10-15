@@ -34,25 +34,25 @@ const Layout = (props) => {
                 className={`nav-home  ${data.pathname === "/" ? "nav-current" : ""} `}
                 role="menuitem"
               >
-                <Link to={`/`}>Home</Link>
+                <Link to={`/`}>Accueil</Link>
               </li>
               <li
-                className={`nav-home  ${data.pathname.includes("/bio") ? "nav-current" : ""} `}
+                className={`nav-home  ${data.pathname.includes("/maison") ? "nav-current" : ""} `}
                 role="menuitem"
               >
-                <Link to={`/bio`}>Bio</Link>
+                <Link to={`/maison`}>La Maison</Link>
               </li>
               <li
-                className={`nav-home  ${data.pathname.includes("/work") ? "nav-current" : ""} `}
+                className={`nav-home  ${data.pathname.includes("/histoire") ? "nav-current" : ""} `}
                 role="menuitem"
               >
-                <Link to={`/work`}>Work</Link>
+                <Link to={`/histoire`}>Histoire</Link>
               </li>
               <li
-                className={`nav-home  ${data.pathname.includes("/news") ? "nav-current" : ""} `}
+                className={`nav-home  ${data.pathname.includes("/actualites") ? "nav-current" : ""} `}
                 role="menuitem"
               >
-                <Link to={`/news`}>News</Link>
+                <Link to={`/actualites`}>Actualités</Link>
               </li>
               <li
                 className={`nav-home  ${data.pathname.includes("/contact") ? "nav-current" : ""} `}
@@ -60,12 +60,12 @@ const Layout = (props) => {
               >
                 <Link to={`/contact`}>Contact</Link>
               </li>
-              <li
+              {/* <li
                 className={`nav-home  ${data.pathname.includes("/elements") ? "nav-current" : ""} `}
                 role="menuitem"
               >
                 <Link to={`/elements`}>Elements</Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
           <div className="site-head-center">

@@ -1,5 +1,5 @@
 const siteConfig = {
-  name: 'Le Garric Blanc',
+  name: 'Garric Blanc',
   shortName: 'garric blanc',
   description: 'La maison du Garric Blanc',
   url: 'garric-blanc.vergnol.eu', // Domain of your site without prefix!

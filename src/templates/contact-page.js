@@ -40,10 +40,10 @@ const ContactPage = ({ data }, location) => {
   return (
     <Layout title={siteTitle} social={social}>
       <Seo title={data.markdownRemark.frontmatter.title}
-        description={data.markdownRemark.frontmatter.description} 
+        description={data.markdownRemark.frontmatter.description}
         image={data.markdownRemark.frontmatter.thumbnail.childImageSharp.gatsbyImageData.images.fallback.src}
         />
-     
+
       <article className="contact-form page-template ">
       {data.markdownRemark.frontmatter.thumbnail && (
         <div className="post-content-image">
@@ -54,9 +54,9 @@ const ContactPage = ({ data }, location) => {
         </div>
       )}
         <div className="post-content-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque. Nullam non nisi est sit amet facilisis. Quisque id diam vel quam. Morbi tincidunt augue interdum velit. Pellentesque adipiscing commodo elit at imperdiet dui accumsan. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. Commodo odio aenean sed adipiscing diam donec adipiscing tristique risus. Mi tempus imperdiet nulla malesuada pellentesque. Maecenas ultricies mi eget mauris pharetra et ultrices. Cursus risus at ultrices mi tempus imperdiet nulla. Sit amet nisl suscipit adipiscing bibendum est ultricies. At volutpat diam ut venenatis tellus in. Cursus eget nunc scelerisque viverra mauris in. Ut aliquam purus sit amet luctus venenatis lectus.</p>
+          {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque. Nullam non nisi est sit amet facilisis. Quisque id diam vel quam. Morbi tincidunt augue interdum velit. Pellentesque adipiscing commodo elit at imperdiet dui accumsan. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. Commodo odio aenean sed adipiscing diam donec adipiscing tristique risus. Mi tempus imperdiet nulla malesuada pellentesque. Maecenas ultricies mi eget mauris pharetra et ultrices. Cursus risus at ultrices mi tempus imperdiet nulla. Sit amet nisl suscipit adipiscing bibendum est ultricies. At volutpat diam ut venenatis tellus in. Cursus eget nunc scelerisque viverra mauris in. Ut aliquam purus sit amet luctus venenatis lectus.</p> */}
 
-          <h3 id="forms">Form</h3>
+          <h3 id="forms">Formulaire de contact</h3>
           <form name="contact" method="POST" data-netlify="true" action="thanks" onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
@@ -69,25 +69,24 @@ const ContactPage = ({ data }, location) => {
               <div className="col-6 col-12-xsmall">
                 <input
                   type="text"
-                  name="first-name"
-                  id="first-name"
+                  name="last-name"
+                  id="last-name"
                   onChange={handleChange}
-                  placeholder="First Name"
+                  placeholder="Nom"
                   required={true}
                 />
               </div>
               <div className="col-6 col-12-xsmall">
                 <input
                   type="text"
-                  name="last-name"
-                  id="last-name"
+                  name="first-name"
+                  id="first-name"
                   onChange={handleChange}
-                  placeholder="Last Name"
+                  placeholder="Prénom"
                   required={true}
                 />
               </div>
-
-              <div className="col-6 col-12-xsmall">
+              <div className="col-12 col-12-xsmall">
                 <input
                   type="email"
                   name="email"
@@ -97,7 +96,7 @@ const ContactPage = ({ data }, location) => {
                   required={true}
                 />
               </div>
-              <div className="col-6 col-12-xsmall">
+              {/* <div className="col-6 col-12-xsmall">
                 <input
                   type="text"
                   name="location"
@@ -106,10 +105,10 @@ const ContactPage = ({ data }, location) => {
                   placeholder="Location"
                   required={true}
                 />
-              </div>
+              </div> */}
               {/* Break */}
               {/* General, Purchase, Commissions, Exhibitions, Gallery Feature, Other */}
-              <div className="col-12">
+              {/* <div className="col-12">
                 <select name="category" id="category" onChange={handleChange} required={true}>
                   <option value>-Nature of Enquiry-</option>
                   <option value={"General"}>General</option>
@@ -119,7 +118,7 @@ const ContactPage = ({ data }, location) => {
                   <option value={"Gallery Feature"}>Gallery Feature</option>
                   <option value={"Other"}>Other</option>
                 </select>
-              </div>
+              </div> */}
 
               {/* Break */}
               {/* <div className="col-6 col-12-small">
@@ -145,23 +144,23 @@ const ContactPage = ({ data }, location) => {
                 <textarea
                   name="message"
                   id="message"
-                  placeholder="Enter your message"
+                  placeholder="Votre message"
                   rows={6}
                   defaultValue={""}
                   onChange={handleChange}
                   required={true}
                 />
               </div>
-              
+
               <div data-netlify-recaptcha="true"></div>
-  
+
               {/* Break */}
               <div className="col-12">
                 <ul className="actions">
                   <li>
                     <input
                       type="submit"
-                      defaultValue="Send Message"
+                      defaultValue="Envoyer le message"
                       className="primary"
                     />
                   </li>
@@ -202,7 +201,7 @@ const indexQuery = graphql`
                     }
         }
       }
-      
+
     }
   }
 `
