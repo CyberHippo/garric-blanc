@@ -562,6 +562,16 @@ footer.site-foot a {
   transform: translateX(calc(50vw - 50%));
 }
 
+.post-content-image-small {
+  margin: 4vw 0;
+  position: relative;
+  width: 40vw;
+  min-width: 100%;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  transform: translateX(calc(50vw - 50%));
+}
+
 .contact-form-image {
   margin: 2vw 0;
   position: relative;

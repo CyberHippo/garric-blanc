@@ -46,7 +46,7 @@ const ContactPage = ({ data }, location) => {
 
       <article className="contact-form page-template ">
       {data.markdownRemark.frontmatter.thumbnail && (
-        <div className="post-content-image">
+        <div className="post-content-image-small">
           <GatsbyImage
             image={getImage(data.markdownRemark.frontmatter.thumbnail)}
             className="kg-image"
